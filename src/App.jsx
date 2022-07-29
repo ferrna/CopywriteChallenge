@@ -25,11 +25,12 @@ function App() {
 
   return (
     <div className="min-vh-100 d-flex flex-column">
-      <nav className="navbar navbar-dark bg-danger">
+      <nav className="navbar navbar-dark bg-danger" id="navbar">
         <div className="container-fluid d-flex justify-content-center align-items-center">
           <div className="d-flex">
             <input
               name="input"
+              id="input"
               value={inputValue}
               onChange={(e) => handleOnChange(e)}
               onKeyDown={(event) => event.key === "Enter" && handleOnSubmit(event)}
@@ -52,7 +53,7 @@ function App() {
       </nav>
       <div className="bg-light h-100 flex-grow-1 d-flex justify-content-center align-items-center text-secondary">
         <div
-          className="shadow rounded p-4"
+          className="shadow rounded p-4" id="resultsCard"
           style={{ width: "900px", maxWidth: "95vw", marginBottom: "10%", minHeight: "50vh" }}
         >
           <div className="title fs-4">Results:</div>
@@ -61,6 +62,7 @@ function App() {
               results.map((res, i) => (
                 <div
                   key={i}
+                  id={i}
                   className="w-75 border border-secondary m-1 rounded px-1 pb-1 position-relative"
                   style={{ lineHeight: "30px" }}
                 >
