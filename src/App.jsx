@@ -62,7 +62,6 @@ function App() {
               results.map((res, i) => (
                 <div
                   key={i}
-                  id={i}
                   className="w-75 border border-secondary m-1 rounded px-1 pb-1 position-relative"
                   style={{ lineHeight: "30px" }}
                 >

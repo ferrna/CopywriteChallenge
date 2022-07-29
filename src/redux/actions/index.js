@@ -10,9 +10,3 @@ export const getTextTransform = function (text) {
     );
   };
 };
-
-export const getTestsStore = function (text) {
-  return function (dispatch) {
-    return dispatch({ type: 'test_store', payload: text })
-  };
-};
